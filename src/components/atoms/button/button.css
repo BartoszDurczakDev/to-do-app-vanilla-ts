@@ -1,0 +1,31 @@
+:host {
+  display: inline-block;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+:host([variant='primary']) button {
+  background: var(--secondary-col);
+
+  color: var(--color-text-white);
+  border: none;
+}
+:host([variant='ghost']) button {
+  background: transparent;
+  color: #3b82f6;
+  border: 1px solid #3b82f6;
+}
+
+:host([variant='link']) button {
+  background: transparent;
+  color: #3b82f6;
+  border: none;
+}
+
+:host([variant='link']) button:hover {
+  border-radius: 0;
+  border-bottom: 1px solid #3b82f6;
+}
